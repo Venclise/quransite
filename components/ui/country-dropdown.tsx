@@ -117,7 +117,7 @@ const CountryDropdownComponent = (
       </PopoverTrigger>
 
       <PopoverContent
-        collisionPadding={10}
+       
         side="bottom"
         className="min-w-[--radix-popper-anchor-width] p-0"
       >
