@@ -34,7 +34,7 @@ type Product = {
   price: number;
   cutprice?: number;
   image: string[];
-  time?: string;
+  time: string;
   instructor?: string;
   rating?: number;
   reviewsCount?: number;
@@ -146,9 +146,9 @@ export default function SingleCourse({ product }: { product: Product }) {
             <div className="flex flex-col gap-3 flex-wrap">
              
               <ToggleGroup 
-                type="single"
-                value={days.toString()} 
-                onValueChange={(val) => {
+      
+                value={days.toString() as any} 
+                onValueChange={(val) => { 
                   if (val) setDays(Number(val)); 
                 }}
                 className="w-full flex flex-wrap"

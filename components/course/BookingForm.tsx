@@ -37,7 +37,7 @@ export default function BookingForm({
 }: {
   title: string;
   price: string;
-  days: string;
+  days: string | any;
   time: string;
 }) {
   const [selectedCountry, setSelectedCountry] = useState<Country | undefined>(
