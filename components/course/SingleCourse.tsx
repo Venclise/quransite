@@ -126,7 +126,7 @@ export default function SingleCourse({ product }: { product: Product }) {
 
               <Select 
                 value={selectedCurrency} 
-                onValueChange={(val) => setSelectedCurrency(val)}
+                onValueChange={(val:any) => setSelectedCurrency(val)}
               >
                 <SelectTrigger className="w-auto h-8 text-xs border-gray-200 bg-gray-50 focus:ring-0">
                   <SelectValue placeholder="USD" />

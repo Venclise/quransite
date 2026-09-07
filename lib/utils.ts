@@ -51,7 +51,7 @@ const RATES: Record<string, number> = {
 
 export function convertPrice(amount: number, currency: string = "USD") {
   const code = currency.toUpperCase();
-  const rate = RATES[code] || 1;
+  const rate = RATES[code] || 1;  
   const converted = amount * rate;
 
   return new Intl.NumberFormat("en-US", {
