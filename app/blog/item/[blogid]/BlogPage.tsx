@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import DOMPurify from "isomorphic-dompurify";
 import Free from "@/sections/Free";
