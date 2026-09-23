@@ -3,7 +3,7 @@ import React from 'react'
 import BlogPage from './BlogPage'
  import RecommendBlog from './RecommendBlog'
 import Free from '@/sections/Free'
-
+export const dynamic = "force-dynamic";
 export default async function page(
     {
     params, 

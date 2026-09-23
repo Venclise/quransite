@@ -1,5 +1,5 @@
 import SingleCourse from '@/components/course/SingleCourse'
-import React from 'react'
+export const dynamic = "force-dynamic";
 
 export default async function page(
     {

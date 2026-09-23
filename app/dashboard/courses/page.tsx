@@ -2,6 +2,7 @@ import Card from '@/components/Card';
 import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react'
+export const dynamic = "force-dynamic";
 
 export default async function  page() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";

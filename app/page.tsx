@@ -13,7 +13,6 @@ export default function page() {
     <div>
       <Hero />
       <Stats />
-      {/* <About /> */}
       <Course />
       <How />
       <Blogs />
