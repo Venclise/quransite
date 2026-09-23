@@ -118,7 +118,7 @@ export default function SingleCourse({ product }: { product: Product }) {
             
             <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
               <div className="flex items-baseline gap-3">
-                <span className="text-3xl font-extrabold text-blue-600">
+                <span className="text-3xl font-extrabold text-cyan-500">
                 
                   {convertPrice(finalPrice, selectedCurrency)}
                 </span>

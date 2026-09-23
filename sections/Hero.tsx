@@ -82,12 +82,12 @@ export default function Hero() {
 
       </div>
       <div className="w-full h-screen  lg:w-[50%] ">
-        <Marquee className="w-full h-full">
-             {/* {data?.map((data:CourseType) => (
+        <Marquee className="w-full h-full flex gap-4">
+              {data?.map((data:CourseType) => (
      
             <Card data={data} />
      
-        ))} */}
+        ))} 
         
         </Marquee>
 

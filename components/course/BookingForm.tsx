@@ -105,7 +105,7 @@ export default function BookingForm({
         <DialogTrigger className="p-5 lg:p-0 gap-4 bg-white flex lg:items-center lg:static fixed bottom-0 left-0 w-full z-50 shadow-[0_-4px_10px_rgba(0,0,0,0.05)] lg:shadow-none">
           <Button
             onClick={() => setFree(false)}
-            className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-6 lg:rounded-full text-sm font-semibold"
+            className="flex-1 bg-cyan-500 hover:bg-cyan-600 text-white py-6 lg:rounded-full text-sm font-semibold"
           >
             Enroll now
           </Button>
@@ -120,7 +120,7 @@ export default function BookingForm({
         <DialogContent className="md:p-16 p-6">
           <DialogHeader>
             <DialogTitle className="flex flex-col gap-4 text-left">
-              <span className="text-blue-600 text-xs font-bold uppercase tracking-widest">
+              <span className="text-cyan-500 text-xs font-bold uppercase tracking-widest">
                 {free ? "Free Trial Booking" : "Course Enrollment"}
               </span>
               <h2 className="text-2xl font-bold text-gray-900 leading-tight">
@@ -133,7 +133,7 @@ export default function BookingForm({
                   </span>
                 ) : (
                   <div className="flex items-baseline gap-2">
-                    <span className="text-2xl font-black text-blue-600">
+                    <span className="text-2xl font-black text-cyan-500">
                       {price}
                     </span>
                     <span className="text-gray-500 text-sm font-medium">
@@ -154,7 +154,7 @@ export default function BookingForm({
                     value={info.name}
                     placeholder="John Doe"
                     onChange={(e) => setInfo({ ...info, name: e.target.value })}
-                    className="rounded-lg border-gray-300 focus:ring-blue-600"
+                    className="rounded-lg border-gray-300 focus:ring-cyan-500"
                     required
                   />
                 </label>
@@ -169,7 +169,7 @@ export default function BookingForm({
                     onChange={(e) =>
                       setInfo({ ...info, email: e.target.value })
                     }
-                    className="rounded-lg border-gray-300 focus:ring-blue-600"
+                    className="rounded-lg border-gray-300 focus:ring-cyan-500"
                     required
                   />
                 </label>
@@ -205,7 +205,7 @@ export default function BookingForm({
 
               <Button
                 disabled={loading}
-                className="w-full py-5 rounded-xl text-md bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-200 transition-all active:scale-[0.98]"
+                className="w-full py-5 rounded-xl text-md bg-cyan-500 hover:bg-cyan-600 shadow-lg shadow-blue-200 transition-all active:scale-[0.98]"
                 onClick={handleSubmit}
               >
                 {loading

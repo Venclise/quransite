@@ -34,6 +34,7 @@ Book a free class now
       </div>
         </div>
       
+      
     </div>
   )
 }
