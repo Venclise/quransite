@@ -9,23 +9,23 @@ export const nav = [
     {
         id: 2,  
         title: "courses",
-        link: "/courses"
+        link: "/course"
     },
     {
         id: 3,
         title: "About",
-        link: "/about"
+        link: "/"
     },
     
       {
         id: 4,
         title: "Works",
-        link: "/works"
+        link: "/"
     },
         {
         id: 5,
         title: "Pricing",
-        link: "/pricing"
+        link: "/"
     }
 ]
 
