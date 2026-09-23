@@ -22,10 +22,9 @@ export default function Card({ data }: { data: ProductData }) {
   const pathname = usePathname();
   const isDashboard = pathname.startsWith("/dashboard");
 
-  // Determines type from data properties or explicit type prop
+
   const isBlog = data.type === "blog" || (!data.price && !data.time);
 
-  // Dynamic link destination depending on content type
   const targetHref = isDashboard
     ? "#"
     : isBlog

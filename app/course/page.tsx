@@ -2,7 +2,13 @@ import Card from "@/components/Card";
 import { div } from "motion/react-client";
 
 
-
+type data = {
+  _id: any;
+  title: string;
+  description: string;
+  price: number;
+   image: string[];
+}
 
 
 export default async function page() {
@@ -24,7 +30,7 @@ export default async function page() {
       
 
 <div className=" w-full grid grid-cols-2 p-5 overflow-y-auto gap-4">
-        {data.map((data) => (
+        {data.map((data:data) => (
            <Card data={data} />
         ))}
      
