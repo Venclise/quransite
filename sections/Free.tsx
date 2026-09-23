@@ -26,7 +26,7 @@ export default function Free() {
       <div className='flex w-full justify-center  items-center gap-4 md:flex-row flex-col'>
 
       <Button className="bg-white  w-full md:w-1/2 rounded-full hover:bg-gray-100 cursor-pointer  py-6 px-5 text-neutral-800">
-                  <Link href="/courses" className="w-full flex items-center justify-center gap-2">
+                  <Link href="/course" className="w-full flex items-center justify-center gap-2">
 Book a free class now
                   </Link>
       </Button>

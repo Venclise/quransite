@@ -55,7 +55,7 @@ Choose a course, set your class time, and start learning Quran online.
 </div>
 
 
-                    <Link href="/courses" className="w-full flex items-center gap-2 justify-center">
+                    <Link href="/course" className="w-full flex items-center gap-2 justify-center">
  <Button className="py-6 px-8  mx-auto my-8 rounded-full bg-cyan-500 hover:bg-cyan-600 text-white  md:w-max w-full cursor-pointer">
             <GraduationCap size={20} /> 
             Explore courses

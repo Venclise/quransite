@@ -66,14 +66,14 @@ export default function Hero() {
         <div className="mt-10 flex flex-wrap justify-center lg:justify-start gap-4 w-full sm:w-auto">
 
           <Button className="py-6 px-8 rounded-full bg-gray-100 text-black hover:bg-gray-200 flex items-center gap-2">
-            <Link href="/courses" className="w-full flex items-center gap-2">
+            <Link href="/course" className="w-full flex items-center gap-2">
             <GraduationCap size={20} />
             Explore courses
           </Link>
           </Button>
 
           <Button className="py-6 px-8 rounded-full bg-cyan-500 hover:bg-cyan-600 text-white ">
-            <Link href="/courses" className="w-full flex items-center gap-2">
+            <Link href="/course" className="w-full flex items-center gap-2">
             <Clock size={20} />
             Book free trial
             </Link>
