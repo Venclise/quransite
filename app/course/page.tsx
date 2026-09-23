@@ -1,5 +1,6 @@
 import Card from "@/components/Card";
-import { div } from "motion/react-client";
+export const dynamic = "force-dynamic";
+
 
 
 type data = {
