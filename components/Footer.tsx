@@ -23,7 +23,7 @@ export default function Footer() {
     <p className='text-xs  font-light'>©{date.getFullYear()} Sarosh Islamic Institute All Rights reserved </p>
 
       </div>
-      <div className='flex items-center gap-4'>
+      <div className='flex items-center flex-wrap justify-center gap-4'>
             <div className='flex flex-col gap-3'>
         <h6 className='text-sm font-semibold'>Courses</h6>
         {

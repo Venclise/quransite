@@ -25,7 +25,7 @@ export default async function page(
     console.log(recommendData)
 
   return (
-    <div className=' h-full w-full lg:p-10 p-5 '>
+    <div className='h-full w-full lg:p-10 p-5 '>
       <div className='flex gap-4 lg:flex-row flex-col'>
 
 <div className='lg:w-[70%] w-full'>

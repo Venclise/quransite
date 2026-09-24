@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/ui/Header";
 import { Toaster } from "sonner";
 import Footer from "@/components/Footer";
+import ChatBtn from "@/components/ui/ChatBtn";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <main>
           <Header />
+           <ChatBtn />
         {children}
         <Footer />
               <Toaster />

@@ -14,6 +14,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import Image from 'next/image'
 
 
 export default function Header() {
@@ -25,8 +26,11 @@ export default function Header() {
   return (
     <div className={`${pathname === "/dashboard " || "/dashboard/blog" || "/dashboard/blog/add" || "/dashboard/products" || "/dashboard/products/add"  ?  "flex" : "flex" } py-10 bg-white  z-10    px-15 w-full h-[3rem]  items-center justify-between`}>
        <div>
-           <Link href="/" className='font-semibold text-2xl'>
-           SII
+           <Link href="/" className='font-semibold text-2xl flex justify-center items-center '>
+           <Image src="/logo.png" width={50} height={50} alt="logo"/>
+           <span className='text-sm lg:text-md text-cyan-600 mt-4'>
+           Saroosh Islamic Institue
+           </span>
            </Link>
        </div>
 
@@ -55,8 +59,11 @@ export default function Header() {
   <SheetContent  className="z-100">
     <SheetHeader>
       <SheetTitle>
-         <Link href="/" className='font-semibold text-2xl'>
-           SII
+          <Link href="/" className='font-semibold text-2xl flex justify-center items-center '>
+           <Image src="/logo.png" width={50} height={50} alt="logo"/>
+           <span className='text-sm lg:text-md text-cyan-600 mt-4'>
+           Saroosh Islamic Institue
+           </span>
            </Link>
       </SheetTitle>
       <SheetDescription className="flex flex-col gap-2 h-screen my-20 ">

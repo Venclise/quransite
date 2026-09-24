@@ -58,6 +58,7 @@ export default function Course() {
 
       <Swiper
         spaceBetween={10}
+        slidesPerView={1.3} 
         breakpoints={{
           425: { slidesPerView: 1.3 },
           576: { slidesPerView: 2 },

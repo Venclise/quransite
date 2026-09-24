@@ -21,16 +21,16 @@ export default async function page() {
 
   console.log(data)
   return (
-    <div className="w-full h-screen lg:p-10 p-5 bg-[#e4f0f9]">
-      <div className="p-10 w-full flex items-center justify-between">
-        <h1 className=" font-semibold text-6xl">Courses.</h1>
-        <p className="text-2xl font-normal max-w-xs">
+    <div className="w-full h-max lg:p-10 p-5 ">
+      <div className="lg:p-10 md:p-5 p-2 w-full flex lg:items-center lg:flex-row flex-col justify-between">
+        <h1 className=" font-semibold lg:text-6xl text-3xl">Courses.</h1>
+        <p className="text-sm lg:text-2xl font-normal max-w-xs">
           Online Quran Courses for Kids & Adults
         </p>
           </div>
       
 
-<div className=" w-full grid grid-cols-2 p-5 overflow-y-auto gap-4">
+<div className=" w-full grid  md:grid-cols-2 mt-5 md:gap-4">
         {data.map((data:data) => (
            <Card data={data} />
         ))}

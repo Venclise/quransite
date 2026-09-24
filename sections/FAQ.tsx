@@ -18,7 +18,7 @@ export default function FAQ({onCourse}:{onCourse:boolean}) {
          limit > 6 && setLimit(() => limit-10)
     }
   return (
-    <div className="h-max w-full lg:p-10 p-5">
+    <div className="h-max w-full lg:p-10 p-5" id="faqs">
           <p className={`${onCourse && "hidden"} text-cyan-500 text-lg text-center font-semibold`}>FAQ's</p>
       <BlurText
         text="Frequently asked questions."

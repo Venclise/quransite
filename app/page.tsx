@@ -5,6 +5,7 @@ import FAQ from '@/sections/FAQ'
 import Free from '@/sections/Free'
 import Hero from '@/sections/Hero'
 import How from '@/sections/How'
+import Reviews from '@/sections/Reviews'
 import Stats from '@/sections/Stats'
 import React from 'react'
 
@@ -17,6 +18,7 @@ export default function page() {
       <How />
       <Blogs />
       <Free />
+      <Reviews />
       <FAQ onCourse={false}/>
     </div>
   )

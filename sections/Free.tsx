@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function Free() {
   return (
-    <div className='w-full h-screen md:h-[70vh] p-5 '>
+    <div className='w-full h-[70vh] p-5 '>
         <div className='w-full h-full bg-cyan-500 border  rounded-4xl flex  flex-col gap-4 justify-center items-center p-5 lg:p-10'>
 
     <BlurText

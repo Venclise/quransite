@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",
+    "@emailjs/browser": "^4.4.1",
     "class-variance-authority": "^0.7.1",
     "cloudinary": "^2.10.0",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
     "country-data-list": "^1.6.3",
+    "emailjs": "^5.0.3",
     "isomorphic-dompurify": "^3.19.0",
     "lucide-react": "^1.27.0",
     "mongoose": "^9.8.1",

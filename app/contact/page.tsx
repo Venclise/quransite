@@ -4,12 +4,49 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Spinner } from "@/components/ui/spinner";
 import { Textarea } from "@/components/ui/textarea";
-import { div } from "motion/react-client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
 
 
 export default function page() {
     const [loading,setLoading] = useState(false)
+        const form = useRef<HTMLFormElement | null>(null);
+ 
+  const [submit,setSubmit] = useState(false)
+  useEffect(() => {
+  emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!);
+}, []);
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    setLoading(true)
+   
+  e.preventDefault();
+
+  if (!form.current) return;
+
+ emailjs.sendForm(
+   process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+   process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+   form.current!,
+   {
+     publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+   }
+ )
+
+
+    .then(() => {
+      console.log("SUCCESS!");
+      toast.success("Message has been submitted.Thank You")
+      form.current?.reset();
+
+      setLoading(false)
+      setSubmit(true)
+    })
+    .catch((error:any) => {
+      console.error("EMAILJS ERROR:", error);
+    })
+    
+};
   return (
     <div className="w-full h-max lg:p-10 p-5 flex items-center justify-around lg:flex-row flex-col">
         <div className="lg:w-max w-full  flex flex-col  items-center justify-center ">
