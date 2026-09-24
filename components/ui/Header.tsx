@@ -43,8 +43,11 @@ export default function Header() {
             ))
         }
         <Button className="px-6 py-5 rounded-full bg-cyan-500 hover:bg-cyan-600">
-            <User />
-              Contact 
+              <Link href="/contact" className="w-full flex items-center gap-2">
+
+            Contact 
+          </Link>
+               
         </Button>
 
        </div>
@@ -77,10 +80,12 @@ export default function Header() {
                 </SheetClose>
             ))
         }
-        <Button className="px-6 py-5 rounded-md bg-cyan-500 hover:bg-cyan-600">
-            <Phone />
-              Contact 
-        </Button>
+      <Button className="py-6 px-8 rounded-full bg-gray-100 text-black hover:bg-gray-200 flex items-center gap-2">
+            <Link href="/contact" className="w-full flex items-center gap-2">
+
+            Contact 
+          </Link>
+          </Button>
 
        
 

@@ -106,7 +106,7 @@ export default function Add() {
   };
 
   return (
-    <div className="mt-24 w-full h-screen p-5 lg:p-10">
+    <div className="mt-24 w-full h-max p-5 lg:p-10">
       <h1 className="font-semibold text-3xl lg:text-5xl">Add a course</h1>
       <div className="w-full h-full mt-12 flex lg:flex-row flex-col-reverse gap-8">
    

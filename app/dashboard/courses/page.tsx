@@ -9,7 +9,7 @@ export default async function  page() {
   const res = await fetch(`${baseUrl}/api/course`)
   const data =await res.json()
   return (
-    <div className='h-screen lg:p-10 p-2 w-full gap-2  grid grid-cols-2 lg:grid-cols-3'>
+    <div className='h-max lg:p-10 p-2 w-full gap-2  grid grid-cols-2 lg:grid-cols-3'>
       <div className='h-[25rem]'>
             <Link href="/dashboard/courses/add" className='flex-1 text-lg flex underline items-center justify-center bg-green-800 rounded-4xl h-full text-white p-2'>
              Add a course <ChevronRight />

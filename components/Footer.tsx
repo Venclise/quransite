@@ -1,6 +1,7 @@
 "use client"
 import { COURSE_LINKS, nav } from '@/lib/constants'
-import { ExternalLink } from 'lucide-react'
+import { ExternalLink, Mail, Phone } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
@@ -44,6 +45,34 @@ export default function Footer() {
                 </Link>
             ))
         }
+      </div>
+      <div className='flex flex-col gap-2'>
+               <h6 className='text-sm font-semibold'>Contact</h6>
+              <a href="tel:+923199239435" className='flex  gap-1 items-center text-xs text-gray-800 hover:underline hover:text-black' >
+                    <Phone size="10"/> +92 319 9239435
+
+              </a>
+              <a href="mailto:saroshislamicinstitute@gmail.com" className='flex gap-1 items-center text-xs text-gray-800 hover:underline hover:text-black' >
+                <Mail size="10"/>
+saroshislamicinstitute@gmail.com
+              </a>
+                <div className='flex items-center gap-2'>
+
+              <Link target="_blank" href="https://www.instagram.com/sarooshislamicinstitute?stkn=eGE3NTN0cXRpZHJw">
+              <Image src="/insta.svg" alt="Instagram" height="15" width="15"  />
+              </Link>
+                 <Link target='_blank' href="https://www.facebook.com/share/1CDT2FCKS7/">
+              <Image src="/fb.svg" alt="Instagram" height="15" width="15"  />
+              </Link>
+
+                    <Link
+  href="https://wa.me/923199239435?text="
+  target="_blank"
+  rel="noopener noreferrer"
+>
+<Image src="whatsapp-black.svg" alt="Whatsapp" height="15" width="15"  />
+</Link>
+                </div>
       </div>
 
         </div>
