@@ -75,17 +75,16 @@ export default function Header() {
                 <SheetClose>
                 <Link href={link} key={id} className={`group text-lg flex items-center justify-between hover:bg-gray-200 py-2 px-2 rounded-sm hover:text-black capitalize  tranition-all  ${link === pathname  ? "text-neutral-800 bg-gray-200" : "text-gray-700"}`}>
                     {title}
-                    <ArrowRight size={15} />
                 </Link>
                 </SheetClose>
             ))
         }
-      <Button className="py-6 px-8 rounded-full bg-gray-100 text-black hover:bg-gray-200 flex items-center gap-2">
-            <Link href="/contact" className="w-full flex items-center gap-2">
-
-            Contact 
-          </Link>
-          </Button>
+          <Button className="bg-cyan-500  w-full md:w-1/2 rounded-full hover:bg-cyan-400 cursor-pointer  py-6 px-5 text-white ">
+                  <Link href="/contact" className="w-full flex items-center justify-center gap-2">
+                  <Phone />
+Contact 
+                  </Link>
+      </Button>
 
        
 

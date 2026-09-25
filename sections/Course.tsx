@@ -2,12 +2,7 @@
 
 import { useEffect, useState } from "react";
 import BlurText from "@/components/BlurText";
-import { Swiper, SwiperSlide } from "swiper/react";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 import Card from "@/components/Card";
 
 interface CourseType {
@@ -46,32 +41,44 @@ export default function Course() {
   if (loading) return <div className="p-10 text-center">Loading courses...</div>;
 
   return (
-    <div className="h-max w-full lg:p-10 p-5">
+    <div className="h-max w-full lg:p-20 p-5">
       <p className="text-cyan-500 text-lg text-center font-semibold">Courses</p>
-      <BlurText
-        text="Master the Quran and Arabic with Expert-Led Programs"
-        delay={200}
-        animateBy="words"
-        direction="top"
-        className="lg:text-5xl text-4xl font-semibold lg:font-medium justify-center mt-5"
-      />
+    <div className="f ">
 
-      <Swiper
-        spaceBetween={10}
-        slidesPerView={1.3} 
-        breakpoints={{
-          425: { slidesPerView: 1.3 },
-          576: { slidesPerView: 2 },
-          1024: { slidesPerView: 2.5},
-        }}
-        className="mt-12 w-full"
+      <BlurText
+           text="Master the"
+           delay={200}
+           animateBy="words"
+           direction="top"
+           className="lg:text-5xl text-4xl font-semibold lg:font-medium justify-center mt-5"
+         />
+           <BlurText
+           text="Quran and Arabic"
+           delay={200}
+           animateBy="words"
+           direction="top"
+           className="lg:text-5xl text-4xl font-semibold lg:font-medium text-cyan-500 justify-center mt-5 text"
+         />
+              <BlurText
+           text="with Expert-Led Programs"
+           delay={200}
+           animateBy="words"
+           direction="top"
+           className="lg:text-5xl text-4xl font-semibold lg:font-medium justify-center mt-5"
+         />
+
+</div>
+      <div
+     
+      
+        className="mt-12 w-full h-max grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4"
       >
-         {data?.map((data:CourseType) => (
-          <SwiperSlide>
+         {data?.slice(0,6).map((data:CourseType) => (
+         
             <Card data={data} />
-          </SwiperSlide>
-        ))} 
-      </Swiper>
+         
+         ))} 
+      </div>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 
 
+import BlurText from "@/components/BlurText";
 import { REVIEWS_DATA } from "@/lib/constants";
 import { Star } from "lucide-react";
 import React from "react";
@@ -7,11 +8,19 @@ import Marquee from "react-fast-marquee";
 
 export default function Reviews() {
   return (
-    <div id="reviews" className="w-full lg:h-screen overflow-hidden flex flex-col gap-4 mt-24 h-max lg:p-5 ">
-    
-     <p className="text-cyan-500 my-4 text-center">Testimonials</p>
-        
+    <div id="reviews" className="w-full lg:h-max overflow-hidden flex flex-col gap-4 mt-24 h-max lg:p-5 ">
+    <div className="my-4">
 
+     <p className="text-cyan-500 font-semibold text-center">Testimonials.</p>
+        
+      <BlurText
+           text="See what our Students say about us "
+           delay={200}
+           animateBy="words"
+           direction="top"
+           className="lg:text-5xl text-4xl font-semibold lg:font-medium justify-center mt-5"
+         />
+    </div>
 
       <Marquee speed={60} pauseOnHover gradient={false}>
         {REVIEWS_DATA.map(({ id, name, review,country }) => (
@@ -20,7 +29,7 @@ export default function Reviews() {
             className="
               mx-3
               overflow-hidden
-              w-[260px] sm:w-[300px] h-[170px]
+              w-[260px] sm:w-[300px] h-[200px]
              
               bg-neutral-100
               border border-neutral-200
@@ -28,16 +37,28 @@ export default function Reviews() {
               flex flex-col justify-between
             "
           >
+       
             <p className="text-sm text-neutral-800 font-semibold leading-relaxed">
               "{review}"
             </p>
+<div className="flex items-center justify-between w-full">
+       <div className="flex items-center ">
+              <Star size={15} className="fill-cyan-500 text-cyan-500" />
+              <Star size={15} className="fill-cyan-500 text-cyan-500" />
 
-            <p className=" text-xs text-right mt-4 text-neutral-800">
+              <Star size={15} className="fill-cyan-500 text-cyan-500" />
+              <Star size={15} className="fill-cyan-500 text-cyan-500" />
+              <Star size={15} className="fill-cyan-500 text-cyan-500" />
+
+            </div>
+
+            <p className=" text-xs text-right   text-neutral-800">
               — {name},<span className="">
 
               {country}
               </span>
             </p>
+</div>
           </div>
         ))}
       </Marquee>
@@ -62,13 +83,24 @@ export default function Reviews() {
               “{review}”
             </p>
 
-            <p className=" text-xs text-right mt-4 text-neutral-900">
-              — {name},
-              <span className="">
+          <div className="flex items-center justify-between w-full">
+       <div className="flex items-center ">
+              <Star size={15} className="fill-cyan-500 text-cyan-500" />
+              <Star size={15} className="fill-cyan-500 text-cyan-500" />
+
+              <Star size={15} className="fill-cyan-500 text-cyan-500" />
+              <Star size={15} className="fill-cyan-500 text-cyan-500" />
+              <Star size={15} className="fill-cyan-500 text-cyan-500" />
+
+            </div>
+
+            <p className=" text-xs text-right  text-neutral-800">
+              — {name},<span className="">
 
               {country}
               </span>
             </p>
+</div>
           </div>
         ))}
       </Marquee> 

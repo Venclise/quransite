@@ -14,8 +14,11 @@ export default function Footer() {
 
     <div className={`${pathname === "/dashboard " || "/dashboard/blog" || "/dashboard/blog/add" || "/dashboard/products" || "/dashboard/products/add"  ?  "flex" : "flex" } w-full bg-gray-50 h-max lg:p-20 p-10  justify-between'` }  >
       <div className='flex flex-col gap-5'>
-         <Link href="/" className='font-semibold text-xl md:text-2xl'>
-           SII
+             <Link href="/" className='font-semibold text-2xl flex items-center '>
+           <Image src="/logo.png" width={50} height={50} alt="logo"/>
+           <span className='text-sm lg:text-md text-cyan-600 mt-4'>
+           Saroosh Islamic Institue
+           </span>
            </Link>
            <p className='text-xs text-gray-700 max-w-sm'>
             Learn Quran online from home with certified male and female tutors.
@@ -24,7 +27,7 @@ export default function Footer() {
     <p className='text-xs  font-light'>©{date.getFullYear()} Sarosh Islamic Institute All Rights reserved </p>
 
       </div>
-      <div className='flex items-center flex-wrap justify-center gap-4'>
+      <div className='flex   lg:flex-row flex-col justify-center gap-4'>
             <div className='flex flex-col gap-3'>
         <h6 className='text-sm font-semibold'>Courses</h6>
         {
@@ -77,7 +80,7 @@ saroshislamicinstitute@gmail.com
 
         </div>
     </div>
-    <p className='text-md text-center font-semibold p-2'>Website made by <Link className='text-blue-500 underline' href="https://weblify-nu.vercel.app/" target="_blank">Weblify </Link></p>
+    <p className='text-sm text-center font-semibold p-2'>Website made by <Link className='text-blue-500 underline' href="https://weblify-nu.vercel.app/" target="_blank">Weblify </Link></p>
     <div >
     </div>
     </div>

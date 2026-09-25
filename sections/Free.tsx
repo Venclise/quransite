@@ -30,8 +30,8 @@ export default function Free() {
 Book a free class now
                   </Link>
       </Button>
-         
       </div>
+         <p className='text-sm italic text-white underline'>No credit card required to book your first session.</p>
         </div>
       
       

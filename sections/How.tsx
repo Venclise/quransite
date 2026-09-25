@@ -7,7 +7,7 @@ import React from 'react'
 export default function How() {
   return (
     
-       <div className="h-max w-full lg:p-10 p-5">
+       <div className="h-max w-full lg:p-10 p-5 bg-gray-50">
       <p className="text-cyan-500 text-lg text-center font-semibold">How it works.</p>
       <BlurText 
         text="Learn Quran Online in 3 Easy Steps"

@@ -48,21 +48,15 @@ export default function Blog() {
         className="lg:text-5xl text-4xl font-semibold lg:font-medium justify-center mt-5"
       />
 
-    <Swiper
-        spaceBetween={10}
-        breakpoints={{
-          425: { slidesPerView: 1.1},
-          576: { slidesPerView: 2 },
-          1024: { slidesPerView: 3},
-        }}
-        className="mt-12"
+    <div
+        className="mt-12 grid gap-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1"
       >
         {data?.map((data:BlogType) => (
-          <SwiperSlide>
+        
             <Card data={data} />
-          </SwiperSlide>
+        
         ))} 
-      </Swiper>
+      </div>
 
     </div>
   )

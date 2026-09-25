@@ -5,6 +5,7 @@ import Courses from "@/components/Card";
 import { Button } from "@/components/ui/button";
 import { courses } from "@/lib/constants";
 import { Clock, GraduationCap, Phone, Timer } from "lucide-react";
+import { div } from "motion/react-client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
@@ -44,7 +45,7 @@ export default function Hero() {
     }, [baseUrl]);
 
   return (
-    <div className="w-full lg:mt-0 mt-30 lg:min-h-screen lg:flex-row flex-col lg:p-10  flex items-center justify-center lg:justify-start">
+    <div className="w-full  lg:mt-0 mt-30 lg:min-h-screen lg:flex-row flex-col lg:p-20  flex items-center justify-center lg:justify-start">
      
       <div className="flex flex-col items-center lg:items-start w-full max-w-5xl lg:w-[50%] ">
         <BlurText
@@ -82,10 +83,11 @@ export default function Hero() {
 
       </div>
       <div className="w-full h-screen  lg:w-[50%] ">
-        <Marquee className="w-full h-full flex gap-4">
+        <Marquee className="w-full h-full flex gap-5">
               {data?.map((data:CourseType) => (
-     
+                <div className="w-[25rem] m-2">
             <Card data={data} />
+                </div>
      
         ))} 
         

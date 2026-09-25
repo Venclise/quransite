@@ -6,6 +6,7 @@ import Free from '@/sections/Free'
 import Hero from '@/sections/Hero'
 import How from '@/sections/How'
 import Reviews from '@/sections/Reviews'
+import Services from '@/sections/Services'
 import Stats from '@/sections/Stats'
 import React from 'react'
 
@@ -14,6 +15,7 @@ export default function page() {
     <div>
       <Hero />
       <Stats />
+      <Services />
       <Course />
       <How />
       <Blogs />

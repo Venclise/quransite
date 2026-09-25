@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function Stats() {
   return (
-    <div className='lg:p-10 p-5 w-full h-max flex items-center justify-around   flex-wrap gap-y-6'>
+    <div className='lg:p-10 bg-neutral-50   p-5 w-full h-max flex items-center justify-around   flex-wrap gap-y-6'>
         <div className='flex flex-col'>
 
         <h3 className='flex items-center gap-0'>
