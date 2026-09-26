@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <div className='flex flex-col w-full '>
 
-    <div className={`${pathname === "/dashboard " || "/dashboard/blog" || "/dashboard/blog/add" || "/dashboard/products" || "/dashboard/products/add"  ?  "flex" : "flex" } w-full bg-gray-50 h-max lg:p-20 p-10  justify-between'` }  >
+    <div className={`${pathname === "/dashboard " || "/dashboard/blog" || "/dashboard/blog/add" || "/dashboard/products" || "/dashboard/products/add"  ?  "flex" : "flex" } w-full bg-gray-50 h-max lg:p-20 p-5 flex lg:flex-row flex-col gap-8  justify-between'` }  >
       <div className='flex flex-col gap-5'>
              <Link href="/" className='font-semibold text-2xl flex items-center '>
            <Image src="/logo.png" width={50} height={50} alt="logo"/>

@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import BlurText from "@/components/BlurText";
 
 import Card from "@/components/Card";
+import { Button } from "@/components/ui/button";
+import { GraduationCap } from "lucide-react";
+import Link from "next/link";
 
 interface CourseType {
   _id: string
@@ -73,12 +76,18 @@ export default function Course() {
       
         className="mt-12 w-full h-max grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4"
       >
-         {data?.slice(0,6).map((data:CourseType) => (
+          {data?.slice(0,6).map((data:CourseType) => (
          
             <Card data={data} />
          
-         ))} 
-      </div>
+         ))}  
+      </div>  
+         <Button className="py-6 px-8 mx-auto  md:w-max w-full  justify-center rounded-full bg-cyan-500 text-white hover:bg-cyan-600 flex items-center gap-2">
+            <Link href="/course" className="w-full justify-center flex items-center gap-2">
+            <GraduationCap size={20} />
+            Explore all courses
+          </Link>
+          </Button>
     </div>
   );
 }

@@ -74,9 +74,9 @@ export default function Hero() {
           </Button>
 
           <Button className="py-6 px-8 rounded-full bg-cyan-500 hover:bg-cyan-600 text-white ">
-            <Link href="/course" className="w-full flex items-center gap-2">
-            <Clock size={20} />
-            Book free trial
+            <Link href="/contact" className="w-full flex items-center gap-2">
+            <Phone size={20} />
+           Contact
             </Link>
           </Button>
         </div>

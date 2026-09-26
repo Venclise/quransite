@@ -37,7 +37,7 @@ export default function Header() {
        <div className='lg:flex items-center justify-center gap-5 hidden'>
         {
             nav.map(({id,title,link}) => (
-                <Link href={link} key={id} className={`text-sm  hover:underline py-2 px-2 rounded-full hover:text-black capitalize  tranition-all  ${link === pathname  ? "text-cyan-500 underline " : "text-gray-700"}`}>
+                <Link href={link} key={id} className={`text-sm  hover:underline py-2 px-2 rounded-full hover:text-black capitalize  tranition-all  ${link === pathname  ? "text-cyan-500 " : "text-gray-700"}`}>
                     {title}
                 </Link>
             ))
