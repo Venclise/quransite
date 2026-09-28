@@ -82,7 +82,7 @@ export default function Course() {
          
          ))}  
       </div>  
-         <Button className="py-6 px-8 mx-auto  md:w-max w-full  justify-center rounded-full bg-cyan-500 text-white hover:bg-cyan-600 flex items-center gap-2">
+         <Button className="py-6 px-8 mx-auto mt-12  md:w-max w-full  justify-center rounded-full bg-cyan-500 text-white hover:bg-cyan-600 flex items-center gap-2">
             <Link href="/course" className="w-full justify-center flex items-center gap-2">
             <GraduationCap size={20} />
             Explore all courses
