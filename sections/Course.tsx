@@ -8,15 +8,17 @@ import { Button } from "@/components/ui/button";
 import { GraduationCap } from "lucide-react";
 import Link from "next/link";
 
-interface CourseType {
-  _id: string
-  title: string
-  price: number
-  time: number
-  description: string
-  image: string[]
-  
-}
+type CourseType = {
+  _id: number;
+  title: string;
+  slug: string; 
+  price?: number;
+  time?: number;
+  description: string;
+  image: string[];
+  createdAt?: string;
+  type?: "course" | "blog";
+};
 
 export default function Course() {
   const [data, setData] = useState<CourseType[]>([]);
