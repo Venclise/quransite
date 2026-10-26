@@ -17,11 +17,6 @@ export const nav = [
         link: "#blogs"
     },
     
-      {
-        id: 4,
-        title: "Testimonials",
-        link: "#reviews"
-    },
         {
         id: 5,
         title: "FAQ's",

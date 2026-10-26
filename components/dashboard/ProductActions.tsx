@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import {
   DropdownMenu,
@@ -23,11 +23,11 @@ import {
 import { EllipsisVertical, Trash, SquarePen, ExternalLink } from "lucide-react";
 
 export default function ProductActions({
-  id,
+  slug, // Changed from id to slug
   isBlog,
 }: {
-  id: string;
-  isBlog: any;
+  slug: string; 
+  isBlog: boolean;
 }) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
@@ -36,7 +36,7 @@ export default function ProductActions({
     setLoading(true);
     try {
       const res = await fetch(
-        `/api/${isBlog ? `/blogs/${id}` : `course/${id}`}`,
+        `/api/${isBlog ? `blogs/${slug}` : `course/${slug}`}`,
         {
           method: "DELETE",
         },
@@ -55,7 +55,7 @@ export default function ProductActions({
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="absolute right-2  top-2 cursor-pointer">
+      <DropdownMenuTrigger className="absolute right-2 top-2 cursor-pointer">
         <EllipsisVertical />
       </DropdownMenuTrigger>
 
@@ -63,7 +63,8 @@ export default function ProductActions({
         <DropdownMenuItem
           onClick={(e) => {
             e.stopPropagation();
-            router.push(`/tours/item/${id}`);
+            // Point to the new course slug route layout
+            router.push(`/course/item/${slug}`);
           }}
         >
           <ExternalLink className="mr-2 h-4 w-4" /> View
@@ -72,14 +73,14 @@ export default function ProductActions({
         <DropdownMenuItem
           onClick={(e) => {
             e.stopPropagation();
-            router.push(`/dashboard/${id}`);
+            router.push(`/dashboard/${slug}`);
           }}
         >
           <SquarePen className="mr-2 h-4 w-4" /> Edit
         </DropdownMenuItem>
 
         <AlertDialog>
-          <AlertDialogTrigger className="w-full bg-red-100 text-red-500 flex items-center  text-sm py-1.5 px-2 rounded-sm">
+          <AlertDialogTrigger className="w-full bg-red-100 text-red-500 flex items-center text-sm py-1.5 px-2 rounded-sm">
             <Trash className="mr-2 h-4 w-4" /> Delete
           </AlertDialogTrigger>
 

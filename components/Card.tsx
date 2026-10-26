@@ -8,8 +8,9 @@ import ProductActions from "./dashboard/ProductActions";
 import { formatDate } from "@/lib/utils";
 
 type ProductData = {
-  _id: string;
+  _id: number;
   title: string;
+  slug: string; // <-- Added slug here
   price?: number;
   time?: number;
   description: string;
@@ -22,17 +23,17 @@ export default function Card({ data }: { data: ProductData }) {
   const pathname = usePathname();
   const isDashboard = pathname.startsWith("/dashboard");
 
-
   const isBlog = data.type === "blog" || (!data.price && !data.time);
 
+  // Use data.slug instead of data._id for courses
   const targetHref = isDashboard
     ? "#"
     : isBlog
-    ? `/blog/item/${data._id}`
-    : `/course/item/${data._id}`;
+    ? `/blog/item/${data._id}` // (You can also change blogs to slug if you add slugs to them later)
+    : `/course/item/${data.slug}`; // <-- Updated to use slug!
 
   return (
-    <div className="h-[20rem] rounded-3xl shadow-md  border ">
+    <div className="h-[20rem] rounded-3xl shadow-md border ">
       <Link href={targetHref} className="h-full w-full block group relative">
         <div className="w-full h-[60%] relative overflow-hidden bg-gray-100 rounded-t-2xl">
           <Image
@@ -61,7 +62,8 @@ export default function Card({ data }: { data: ProductData }) {
         </div>
 
         <div className="flex flex-col gap-2 p-2">
-          {isDashboard && <ProductActions id={data._id} isBlog={isBlog} />}
+        
+          {isDashboard && <ProductActions slug={data.slug} isBlog={isBlog} />}
 
           <h2 className="text-sm md:text-xl lg:text-2xl font-semibold line-clamp-2">
             {data.title}
@@ -75,7 +77,7 @@ export default function Card({ data }: { data: ProductData }) {
                 </span>
                 <sup className="text-xs font-normal">2 days/week</sup>
               </div>
-              <div className="flex items-center gap-1 text-xs  font-semibold">
+              <div className="flex items-center gap-1 text-xs font-semibold">
                 <Clock size={10} strokeWidth={1} />
                 {data.time}min/session
               </div>

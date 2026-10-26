@@ -10,15 +10,18 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 
-interface CourseType {
-  _id: string
-  title: string
-  price: number
-  time: number
-  description: string
-  image: string[]
-  
-}
+
+type CourseType = {
+  _id: number;
+  title: string;
+  slug: string; 
+  price?: number;
+  time?: number;
+  description: string;
+  image: string[];
+  createdAt?: string;
+  type?: "course" | "blog";
+};
 
 export default function Hero() {
 

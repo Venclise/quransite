@@ -20,7 +20,7 @@ export default function page() {
       <How />
       <Blogs />
       <Free />
-      <Reviews />
+      {/* <Reviews /> */}
       <FAQ onCourse={false}/>
     </div>
   )
