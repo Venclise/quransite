@@ -10,7 +10,7 @@ import { formatDate } from "@/lib/utils";
 type ProductData = {
   _id: number;
   title: string;
-  slug: string; // <-- Added slug here
+  slug: string; 
   price?: number;
   time?: number;
   description: string;

@@ -9,12 +9,17 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Card from '@/components/Card';
 
-interface BlogType {
-  _id: string
-  title: string
-  description: string
-  image: string[]
-}
+type BlogType = {
+  _id: number;
+  title: string;
+  slug: string; 
+  price?: number;
+  time?: number;
+  description: string;
+  image: string[];
+  createdAt?: string;
+  type?: "course" | "blog";
+};
 
 export default function Blog() {
 

@@ -12,7 +12,7 @@ import FAQ from "@/sections/FAQ";
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://www.sarooshislamicinstitute.com";
 
-// 1. Static Geo-Targeted Metadata for the United Arab Emirates
+
 export const metadata: Metadata = {
   title: "Online Quran Academy UAE | 1-on-1 Tajweed Tutors Dubai & Abu Dhabi",
   description:
