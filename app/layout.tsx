@@ -12,12 +12,7 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-<<<<<<< HEAD
-
-const siteUrl = "https://www.sarooshislamicinstitute.com/"; 
-=======
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.sarooshislamicinstitute.com"; 
->>>>>>> f4bd69a (Optmized SEO)
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -52,16 +47,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "/",
-<<<<<<< HEAD
-    languages: {
-      "en-GB": "/uk",
-      "en-US": "/us",
-      "en-AE": "/uae",
-      "x-default": "/",
-    },
-=======
   
->>>>>>> f4bd69a (Optmized SEO)
   },
   openGraph: {
     title: "Saroosh Islamic Institute | Online Quran & Tajweed Academy",
@@ -71,11 +57,7 @@ export const metadata: Metadata = {
     siteName: "Saroosh Islamic Institute",
     images: [
       {
-<<<<<<< HEAD
-        url: "/og-image.png", // Ensure you add a high-res graphic in public folder (1200x630)
-=======
         url: "/og-image.png",
->>>>>>> f4bd69a (Optmized SEO)
         width: 1200,
         height: 630,
         alt: "Saroosh Islamic Institute - Online Quran Classes",
@@ -109,10 +91,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-<<<<<<< HEAD
- 
-=======
->>>>>>> f4bd69a (Optmized SEO)
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",

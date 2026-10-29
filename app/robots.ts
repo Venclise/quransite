@@ -10,21 +10,12 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: "*",
         allow: "/",
         disallow: [
-<<<<<<< HEAD
-          "/api/",          // Disallow backend API endpoints
-          "/admin/",        // Disallow admin dashboard routes (if applicable)
-          "/sign-in/",      // Disallow Clerk authentication pages
-          "/sign-up/",      // Disallow Clerk sign-up routes
-          "/user/",         // Disallow internal user portal routes
-          "/*?*",           // Disallow URL search params/query strings to prevent duplicate indexing
-=======
           "/api/",
           "/admin/",
           "/sign-in/",
           "/sign-up/",
           "/user/",
     
->>>>>>> f4bd69a (Optmized SEO)
         ],
       },
     ],
