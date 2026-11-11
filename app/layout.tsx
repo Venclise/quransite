@@ -5,7 +5,7 @@ import Header from "@/components/ui/Header";
 import { Toaster } from "sonner";
 import Footer from "@/components/Footer";
 import ChatBtn from "@/components/ui/ChatBtn";
-import { ClerkProvider } from "@clerk/nextjs";
+
 
 const inter = Inter({
   variable: "--font-inter",
@@ -157,7 +157,8 @@ export default function RootLayout({
         <main className="flex-1 flex flex-col">
           <Header />
           <ChatBtn />
-          <ClerkProvider>{children}</ClerkProvider>
+   
+            {children}
           <Footer />
           <Toaster />
         </main>
